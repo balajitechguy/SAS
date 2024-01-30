@@ -5,7 +5,7 @@
 * Description    : This SAS program is use search to a column across all datasets in a library and print respective datasets in the log
 ******************************************************************************************************/
 /* Define the library containing the datasets */
-libname mylib 'O:\Eisai\projects\e2086\a001-001\biostats\csr\dev\data\sds' access=readonly;
+libname mylib 'C:\Users\balajim\Desktop\MY CODES' access=readonly;
 
 /* Specify the column name to search for */
 %let column_name = USUBJID;
