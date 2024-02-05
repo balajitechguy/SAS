@@ -2,7 +2,7 @@
 * Program Name   : Columnsearch.sas
 * Author         : Balaji.M
 * SAS Version    : SAS 9.4 or higher
-* Description    : This SAS program is use search to a value across all datasets in a library
+* Description    : This SAS program is use find the column presence across all datasets in a library
 ******************************************************************************************************/
 /* Define the library containing the datasets */
 libname mylib 'C:\Users\balajim\Desktop\MY CODES' access=readonly;
