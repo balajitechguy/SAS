@@ -12,3 +12,6 @@ x "start msedge O:\Users\Balaji.M\comp.pdf";
 
 x "start msedge https://www.cdisc.org/system/files/members/standard/foundational/SDTMIG%20v3.4-FINAL_2022-07-21.pdf";
 x "start msedge https://www.cdisc.org/system/files/members/standard/foundational/adam/ADaMIG%20v1.2-Final.pdf";
+
+*OPEN A FOLDER FOR EASY ACCESS; 
+x "start explorer O:\Users\Balaji.M";
