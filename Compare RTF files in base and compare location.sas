@@ -61,20 +61,16 @@ run;
 /*Generate macro variables for base and compare directory files*/
 proc sql noprint;
 	%global lst;
-	select count (*) into :obs_count from newfiles;
+	select count(*) into :newobs from newfiles; 
 	select fname_rtf into :lst separated by '$' from both;
 	select tranwrd(fname_rtf,".rtf","$") into :lst1 separated by '' from both;
-	%if &obs_count ne 0 %then %do;
-	select fname_rtf into :newfile separated by '' from newfiles;
-	%end;
 quit;
 
 /*Remove temporary datasets*/
 proc sql noprint;
-  drop table filenames_basedir,filenames_comparedir,both,newfiles;
+  drop table filenames_basedir,filenames_comparedir,both;
 quit;
 
-options &macropt.;
 /*Comparison of files which are present in both base and compare location*/
 %macro comp;	
 
@@ -144,9 +140,17 @@ quit;
 
 /*Keep essential files at end of the list*/
 %if %sysfunc(countw(&lst1))=&i. %then %do;
-proc datasets library=work nolist;save issuefiles_code rtf_issue_files ;
+proc datasets library=work nolist;save issuefiles_code rtf_issue_files newfiles;
+quit;
+
 title "RTF FILES WITH MISMATCHES";
 proc sql;select * from rtf_issue_files;
+quit;
+%end;
+
+%if %sysfunc(countw(&lst1))=&i. and &newobs ne 0 %then %do;
+title "RTF FILES PRESENT ONLY IN COMPARE LOCATION";
+proc sql;select fname_rtf as filename from newfiles;
 quit;
 %end;
 
