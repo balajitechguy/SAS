@@ -23,7 +23,7 @@ dm "log" clear continue;
 options source;
 
 /*DATASET LOCATION*/
-libname ads "O:\Eisai\projects\f7029\a001-001\biostats\csr\dev\data\ads" access=readonly;
+libname ads "O:\data\ads" access=readonly;
 ***********************************************************************;
 **                        Required datasets                          **;
 ***********************************************************************;
