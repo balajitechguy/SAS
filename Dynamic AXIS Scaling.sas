@@ -5,8 +5,14 @@
 * Description    : This SAS program used to generate max and by macro variable for dynamic axiscale
 ******************************************************************************************************/
 
-options mprint mlogic symbolgen;
 %macro axiscale();
+
+%macro clean();
+/*Remove non-essentail datasets*/
+proc datasets library=work nolist;
+   delete info: max;
+quit;
+%mend clean;
 
 %do i=1 %to %sysfunc(countw(&paramcd)); 
 %let paramcd_ = %scan(&paramcd,&i,"$");
@@ -14,12 +20,13 @@ options mprint mlogic symbolgen;
 /*Find max value*/
 proc sort data=final out=max;
 by paramcd maxval;
-
-data _null_;
+data max;
 	set max(keep=paramn paramcd maxval where=(paramcd="&paramcd_"));
 	by paramcd maxval;
 	if last.paramcd then output;
 	call symputx("max",maxval,"G");
+data info&paramcd_;
+	set max;
 /*Compute max and by value*/
 	unit=&max/10; 
 	grade=floor(log10(unit)); 
@@ -33,11 +40,14 @@ data _null_;
 	%global &paramcd_.max &paramcd_.by;
 	call symputx("&paramcd_.max",put(maxscale,best.),"G"); 
 	call symputx("&paramcd_.by",put(interval,best.),"G"); 
+/*Set all paramcd datasets with axisinfo*/
+data axisinfo;
+	set info:;
 run; 
 
 %end;
-
-%mend axiscale; 
-
+%mend axiscale;
+ 
 %axiscale;
+%clean;
 
