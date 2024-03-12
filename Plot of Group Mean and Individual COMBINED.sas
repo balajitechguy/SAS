@@ -1,5 +1,5 @@
 /**************************************************************************************************
-* Program Name   : GroupMean_Individual.sas
+* Program Name   : GroupMean_Individual_combined.sas
 * Author         : Balaji.M
 * SAS Version    : SAS 9.4 or higher
 * Description    : This SAS program is used to plot group mean and individual in combined manner
