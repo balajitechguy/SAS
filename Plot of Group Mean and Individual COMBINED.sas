@@ -278,3 +278,5 @@ ods rtf startpage = Yes;
 %end;
 
 %mend cfwplot;
+
+%cfwplot(data=adca,where=not missing(paramcd));
