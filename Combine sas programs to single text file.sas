@@ -7,18 +7,18 @@
 				   outpath:- directory to store the combined text file
 				   combinefilename:- combined text file name
 ******************************************************************************************************/
-%let inpath=C:\Users\balajim\Desktop\MY CODES;
-%let outpath=C:\Users\balajim\Desktop\MY CODES;
+%let inpath=O:\Users\Balaji.M\Comb;
+%let outpath=O:\Users\Balaji.M\Comb\;
 %let combfilename=COMBINED;
 
-filename _dir_ "%bquote(&path)";
+filename _dir_ "%bquote(&inpath)";
 data filenames(keep=filenames);
   length filenames $1000.;
   handle=dopen( '_dir_' );
   if handle > 0 then do;
    count=dnum(handle);
    do i=1 to count;
-    filenames="&path"||dread(handle,i);
+    filenames=dread(handle,i);
     output filenames;
    end;
   end;
@@ -49,4 +49,3 @@ data _null_;
   len = lengthn(line);
   put line $varying32767. len;
 run;
-
