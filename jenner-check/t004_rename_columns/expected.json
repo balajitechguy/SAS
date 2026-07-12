@@ -1,0 +1,15 @@
+{
+  "_captured_at": "2026-07-12T15:15:00Z",
+  "_captured_run_id": "r_cca7408b623b4e8b9607a289a47d9f3c",
+  "status": "ok",
+  "exit_code": 0,
+  "log_contains": [
+    "NOTE: Wrote src (2 rows, 3 columns).",
+    "NOTE: PROC CONTENTS: OUT=chg1 created with 3 variables",
+    "NOTE: Macro variable VARLIST = pat_id=PATID sys_bp=SYSBP vis_dt=VISDT",
+    "NOTE: Dataset SRC has been modified.",
+    "NOTE: PROC PRINT completed: 2 observations printed, 3 variables"
+  ],
+  "log_does_not_contain": ["ERROR:", "[JENNER-ERROR", "WARNING:"],
+  "diagnostics": {"parse_warnings": [], "runtime_warnings": []}
+}

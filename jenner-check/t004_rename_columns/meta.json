@@ -1,0 +1,7 @@
+{
+  "bundle": "t004_rename_columns",
+  "source_file": "Rename multiple columns same type.sas",
+  "source_blob_sha": "24c4560ca7acb21cb105c52b6c9d9d6683671740",
+  "source_commit": "ec2bffc2b16ffb4368e62ce05e8c9a231ecb0bde",
+  "notes": "Technique preserved exactly: PROC CONTENTS to enumerate columns, a DATA step to compute an old=new rename list via TRANWRD/UPCASE, PROC SQL SELECT INTO to collapse it into a macro variable, then PROC DATASETS MODIFY/RENAME to apply it. Three adaptations: (1) sashelp.class swapped for a small inline mock table with underscore-separated column names (pat_id, vis_dt, sys_bp) -- the original used sashelp.class, whose column names have no underscores to strip, so the rename logic was a silent no-op on the unmodified script; (2) the intermediate variable literally named 'rename' renamed to 'renamevar' -- Jenner's parser rejects a bare DATA step assignment target named rename (investigated: LABEL works as a bare variable name in Jenner but DROP/KEEP/WHERE/FORMAT/LENGTH/RENAME do not, an inconsistency I could not confirm against authoritative SAS 9.4 grammar without the sas-expert agent, so treated as not-safely-fileable rather than filed as a bug); (3) PROC DATASETS MODIFY/RENAME retargeted from chg1 (the CONTENTS metadata table, which never had the source's own columns) to src (the actual target dataset) -- the original script applied the computed rename list back onto the metadata table itself, which is a logic bug in the original (confirmed by WARNING: Variable ... not found in dataset CHG1 on the unmodified target)."
+}

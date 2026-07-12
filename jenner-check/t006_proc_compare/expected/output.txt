@@ -1,0 +1,16 @@
+The COMPARE Procedure
+Comparison of WORK.DEV with WORK.VAL
+Data Set Summary
+Dataset          Created    Observations    Variables
+WORK.DEV                               2            2
+WORK.VAL                               2            2
+Variables Summary
+Number of Variables in Common: 2
+Observation Summary
+Observation       Base    Compare
+First Obs            1          1
+Last Obs             2          2
+Number of Observations in Common: 2
+Values Comparison Summary
+Number of Variables Compared with All Observations Equal: 2
+No unequal values were found. All values compared are equal.

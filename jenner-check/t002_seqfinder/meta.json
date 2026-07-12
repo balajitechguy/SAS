@@ -1,0 +1,7 @@
+{
+  "bundle": "t002_seqfinder",
+  "source_file": "Filter records with a particular sequence of numbers row-wise.sas",
+  "source_blob_sha": "9e7e7f083b4f514463760ec41874423b55b97f2b",
+  "source_commit": "ec2bffc2b16ffb4368e62ce05e8c9a231ecb0bde",
+  "notes": "Fully self-contained script: inline datalines build a subject/seq test dataset, then LAG/LAG2 functions plus PROC SQL locate the row-wise sequence 8,0,1 and filter to the matching 3 rows. No edits needed to run. Confirmed correct: reqrecords has 3 rows (subject 1002, the 8/0/1 sequence), LASTROW=5/MIDDLEROW=4/FIRSTROW=3 as expected."
+}

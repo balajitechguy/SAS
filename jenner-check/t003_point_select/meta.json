@@ -1,0 +1,7 @@
+{
+  "bundle": "t003_point_select",
+  "source_file": "Select Below and Above value.sas",
+  "source_blob_sha": "7b7129ece7f1436543f13c91a32d62171893b079",
+  "source_commit": "ec2bffc2b16ffb4368e62ce05e8c9a231ecb0bde",
+  "notes": "Uses sashelp.class (built-in sample data) unmodified structurally; the SET...POINT= technique to grab the row above/below a matched row is unchanged. One substitution applied: the original script matches Name=\"Jeffrey\", a name present in the classic real-SAS sashelp.class but absent from Jenner's synthetic sashelp.class (Amir, Bethany, Carlos, ... 19 different names, no Jeffrey) -- so the conditional never fired and 'select' came back with 0 rows on the unmodified script. Swapped to Name=\"George\", who IS present in Jenner's sashelp.class, confirming the point= technique itself works correctly (select now returns the expected 3 rows: the row before/at/after George)."
+}

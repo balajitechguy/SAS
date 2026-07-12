@@ -1,0 +1,12 @@
+{
+  "_captured_at": "2026-07-12T15:18:00Z",
+  "_captured_run_id": "r_7fb8bf7bfcd344ffbb031c352d3fc565",
+  "status": "ok",
+  "exit_code": 0,
+  "log_contains": [
+    "NOTE: Wrote check (1 rows, 1 columns).",
+    "NOTE: Table check altered."
+  ],
+  "log_does_not_contain": ["ERROR:", "[JENNER-ERROR"],
+  "diagnostics": {"parse_warnings": [], "runtime_warnings": []}
+}
