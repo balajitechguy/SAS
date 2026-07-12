@@ -1,0 +1,7 @@
+{
+  "bundle": "t007_varexist",
+  "source_file": "Simple method to check if variable exists in a dataset.sas",
+  "source_blob_sha": "1f46bdf0a7238a0727503c4b99d6db249ad4307b",
+  "source_commit": "ec2bffc2b16ffb4368e62ce05e8c9a231ecb0bde",
+  "notes": "The %varexist(in=) macro (dictionary.columns lookup for an EPOCH variable, then a conditional PROC SORT that drops it if present) is unmodified. The repo had no caller (in=ex referenced a dataset that does not exist anywhere in the repo), so a small caller was written: a mock ex dataset with usubjid + epoch columns, matching the clinical-trials-style variable names the macro's own logic implies. Confirmed: dictionary.columns correctly finds EPOCH (VARCOUNT=1), the epoch-present branch fires, and ex1 is written with epoch dropped (columns: usubjid only)."
+}

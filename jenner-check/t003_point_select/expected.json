@@ -1,0 +1,13 @@
+{
+  "_captured_at": "2026-07-12T15:10:00Z",
+  "_captured_run_id": "r_f9f8733ac2234488b5bc6e6ea86846ec",
+  "status": "ok",
+  "exit_code": 0,
+  "log_contains": [
+    "NOTE: Read 19 rows from sashelp.class.",
+    "NOTE: Wrote class (19 rows, 5 columns).",
+    "NOTE: Wrote select (3 rows, 7 columns)."
+  ],
+  "log_does_not_contain": ["ERROR:", "[JENNER-ERROR"],
+  "diagnostics": {"parse_warnings": [], "runtime_warnings": []}
+}

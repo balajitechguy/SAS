@@ -1,0 +1,16 @@
+{
+  "_captured_at": "2026-07-12T15:07:00Z",
+  "_captured_run_id": "r_d52be428011243d3949c7d30e5a1a93e",
+  "status": "ok",
+  "exit_code": 0,
+  "log_contains": [
+    "NOTE: Wrote testdata (11 rows, 2 columns).",
+    "NOTE: Wrote seqfinder (11 rows, 6 columns).",
+    "NOTE: Macro variable LASTROW = 5",
+    "NOTE: Macro variable MIDDLEROW = 4",
+    "NOTE: Macro variable FIRSTROW = 3",
+    "NOTE: Table reqrecords created."
+  ],
+  "log_does_not_contain": ["ERROR:", "[JENNER-ERROR"],
+  "diagnostics": {"parse_warnings": [], "runtime_warnings": []}
+}

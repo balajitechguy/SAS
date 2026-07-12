@@ -1,0 +1,15 @@
+{
+  "_captured_at": "2026-07-12T15:20:00Z",
+  "_captured_run_id": "r_d467c9b8a7a64378890468e7673730db",
+  "status": "ok",
+  "exit_code": 0,
+  "log_contains": [
+    "NOTE: Wrote dev (2 rows, 2 columns).",
+    "NOTE: Wrote val (2 rows, 2 columns).",
+    "NOTE:   Matched observations: 2",
+    "NOTE:     - Equal:            2",
+    "NOTE:     - Unequal:          0"
+  ],
+  "log_does_not_contain": ["ERROR:", "[JENNER-ERROR"],
+  "diagnostics": {"parse_warnings": [], "runtime_warnings": []}
+}

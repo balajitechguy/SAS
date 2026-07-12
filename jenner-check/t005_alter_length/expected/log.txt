@@ -1,0 +1,13 @@
+
+NOTE: Option OBS changed to 100.
+NOTE: DATA check
+
+
+NOTE: Wrote check (1 rows, 1 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: PROC SQL 
+
+NOTE: Table check altered.
+NOTE: PROC SQL statement used.

@@ -1,0 +1,16 @@
+{
+  "_captured_at": "2026-07-12T15:05:00Z",
+  "_captured_run_id": "r_f1a1f71b68454e839a6a91f11c6afeff",
+  "status": "ok",
+  "exit_code": 0,
+  "log_contains": [
+    "NOTE: Wrote sample_adsl (5 rows, 3 columns).",
+    "NOTE: Table count created.",
+    "NOTE: Macro variable BIGN0 = 2",
+    "NOTE: Macro variable BIGN1 = 2",
+    "NOTE: Macro variable BIGN2 = 1",
+    "NOTE: Macro variable BIGN3 = 0"
+  ],
+  "log_does_not_contain": ["ERROR:", "[JENNER-ERROR"],
+  "diagnostics": {"parse_warnings": [], "runtime_warnings": []}
+}

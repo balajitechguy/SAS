@@ -1,0 +1,14 @@
+{
+  "_captured_at": "2026-07-12T15:22:00Z",
+  "_captured_run_id": "r_d2807950999e41938c6dbdd70ac0e9f6",
+  "status": "ok",
+  "exit_code": 0,
+  "log_contains": [
+    "NOTE: Wrote ex (3 rows, 2 columns).",
+    "NOTE: Table varexist created.",
+    "NOTE: Macro variable VARCOUNT = 1",
+    "NOTE: Wrote ex1 (3 rows, 2 columns)."
+  ],
+  "log_does_not_contain": ["ERROR:", "[JENNER-ERROR"],
+  "diagnostics": {"parse_warnings": [], "runtime_warnings": []}
+}

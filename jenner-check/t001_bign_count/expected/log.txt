@@ -1,0 +1,21 @@
+
+NOTE: Option OBS changed to 100.
+NOTE: DATA sample_adsl
+
+
+NOTE: Wrote sample_adsl (5 rows, 3 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+bign0 &bign0
+bign1 &bign1
+bign2 &bign2
+bign3 &bign3
+NOTE: PROC SQL 
+
+NOTE: Table count created.
+NOTE: Macro variable BIGN0 = 2
+NOTE: Macro variable BIGN1 = 2
+NOTE: Macro variable BIGN2 = 1
+NOTE: Macro variable BIGN3 = 0
+NOTE: PROC SQL statement used.

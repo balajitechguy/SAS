@@ -1,0 +1,7 @@
+{
+  "bundle": "t006_proc_compare",
+  "source_file": "Ignore space PROC Compare.sas",
+  "source_blob_sha": "a29c8f5c961aa8cb265a5604088dc7fbb4018d83",
+  "source_commit": "ec2bffc2b16ffb4368e62ce05e8c9a231ecb0bde",
+  "notes": "The %space(dev=,val=) macro (array-driven COMPRESS(...,'s') whitespace normalization on every character variable, then PROC COMPARE) is unmodified. The repo had no caller for this macro (dev=chk1, val=chk2 referenced datasets that do not exist anywhere in the repo), so a small caller was written: chk1/chk2 mock datasets whose 'name' values differ only by extra internal whitespace ('Balaji  M' vs 'Balaji M'), so the space-normalization technique has something real to demonstrate. Confirmed: PROC COMPARE reports 2 matched, 0 unequal after normalization."
+}

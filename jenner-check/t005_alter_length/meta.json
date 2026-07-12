@@ -1,0 +1,7 @@
+{
+  "bundle": "t005_alter_length",
+  "source_file": "Reduce length of variable without warning.sas",
+  "source_blob_sha": "80ce65af644cbff0472df54fc04d55aea29280d5",
+  "source_commit": "ec2bffc2b16ffb4368e62ce05e8c9a231ecb0bde",
+  "notes": "Fully self-contained, unmodified script: a DATA step declares a $200 character variable, then PROC SQL ALTER TABLE MODIFY shrinks it to char(10) without the truncation warning a direct re-LENGTH would trigger. No edits needed to run; confirmed Table check altered."
+}

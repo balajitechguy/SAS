@@ -1,0 +1,7 @@
+{
+  "bundle": "t001_bign_count",
+  "source_file": "Bign count simplified.sas",
+  "source_blob_sha": "dfd68ca38071d08bbe2ec5c823de2c053caef206",
+  "source_commit": "ec2bffc2b16ffb4368e62ce05e8c9a231ecb0bde",
+  "notes": "Fully self-contained script: inline datalines build sample_adsl, then a %count macro select-into's per-treatment-group subject counts via PROC SQL. No edits needed to run. Confirmed a Jenner engine bug during self-check (filed as set/ regression test 404162, PR EastAgile/jenner-language#14968): the %put lines inside the %do loop print the literal unresolved &bign<i> token instead of the value, because the macro-body %do-loop-body expansion doesn't interleave PROC SQL INTO writes with same-iteration %put the way SAS requires. The underlying computation is unaffected (verified correct via the NOTE: Macro variable BIGNx = value log lines), so expected.json pins on those NOTE lines rather than the buggy %put output."
+}
